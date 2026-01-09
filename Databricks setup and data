@@ -1,0 +1,40 @@
+🚀 Day 1 of Databricks 14 Days AI Challenge — Completed!
+
+
+
+Today I completed an important milestone in my data journey, and honestly, it feels really good to pause and reflect.
+
+
+
+I learned how to:
+
+
+
+*Generate and use Kaggle API credentials
+
+*Securely download a large real-world ecommerce dataset (4.3GB) directly into Databricks
+
+*Create schemas and volumes for proper data organization
+
+*Load raw CSV files into Spark DataFrames
+
+*Validate data using row counts, schema checks, and sample queries
+
+
+
+What stood out to me the most was understanding why each step matters not just running commands, but knowing how data actually moves from an external source (Kaggle) into a cloud analytics platform like Databricks.
+
+
+
+There were errors, restarts, and moments of confusion 😅
+
+But solving them step by step helped me build real confidence with Databricks, Spark, and cloud-based data workflows.
+
+
+
+This feels less like “learning tools” and more like learning how data is handled in real companies.
+
+
+
+
+
