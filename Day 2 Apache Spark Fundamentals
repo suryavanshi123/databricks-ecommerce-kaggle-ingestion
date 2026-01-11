@@ -1,0 +1,73 @@
+Day 02 – Apache Spark Fundamentals
+
+14 Days Databricks AI Challenge
+
+📌 Objective
+
+The goal of Day 02 was to understand Apache Spark fundamentals and perform basic data processing operations using Spark DataFrames on a real e-commerce dataset in Databricks.
+
+📊 Dataset
+
+Source: Kaggle (E-commerce Behavior Data)
+
+Files used: 2019-Oct.csv
+
+Data includes:
+
+event_type (view, cart, purchase)
+
+product_id
+
+user_id
+
+price
+
+category and timestamps
+
+🛠️ Tools & Technologies
+
+Databricks Community Edition
+
+Apache Spark (PySpark)
+
+Spark SQL
+
+✅ Tasks Performed
+
+Loaded CSV data into a Spark DataFrame
+
+Explored dataset using show(), count(), and printSchema()
+
+Performed Spark transformations:
+
+select() – column selection
+
+filter() – conditional filtering
+
+groupBy() – aggregation by event type
+
+orderBy() – sorting aggregated results
+
+Converted DataFrame into a temporary SQL view
+
+Executed Spark SQL queries for event-level analysis
+
+Exported aggregated results as CSV
+
+🧠 Key Learnings
+
+Spark works on distributed data using partitions
+
+Transformations are lazy and execute only when an action is triggered
+
+DataFrames are optimized using Spark’s Catalyst Optimizer
+
+Spark SQL enables analytics using SQL syntax on big data
+
+📂 Output
+
+Aggregated event-level summary exported as CSV
+
+Spark jobs and stages observed using Databricks Spark UI
+
+#DatabricksWithIDC #ApacheSpark #Databricks #Codebasics #IndianDataClub
