@@ -1,0 +1,57 @@
+Day 03 – PySpark Transformations Deep Dive
+
+This folder contains my Day 03 work from the 14 Days Databricks AI Challenge, where I explored more advanced PySpark transformations using an e-commerce dataset.
+
+What I did
+
+On Day 3, I focused on understanding how PySpark handles more complex data processing tasks. I worked with multiple months of data and applied transformations that are commonly used in real-world analytics and data engineering projects.
+
+Dataset
+
+E-commerce behavior dataset (October & November 2019)
+
+Data includes user events such as views, cart actions, and purchases
+
+Key columns used: event_type, price, category_code, event_time
+
+Tasks Performed
+
+Combined October and November datasets using union
+
+Performed joins to enrich event data with category information
+
+Applied window functions to:
+
+Rank purchases based on price
+
+Calculate running revenue
+
+Created derived features such as:
+
+High-value purchase indicator
+
+Purchase flag for event classification
+
+Identified and fixed data type issues by casting string columns to numeric types
+
+Key Learnings
+
+Spark treats all CSV columns as strings unless schema is defined
+
+Explicit data type casting is necessary before applying numeric conditions
+
+Window functions are useful for running totals and ranking without collapsing rows
+
+Feature engineering is an important step before analysis or modeling
+
+Notes
+
+This day helped me move beyond basic Spark operations and understand how transformations are applied in practical scenarios. The focus was more on understanding the logic rather than writing complex code.
+
+Tags
+
+#DatabricksWithIDC
+#PySpark
+#Databricks
+#Codebasics
+#IndianDataClub
