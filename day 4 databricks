@@ -1,0 +1,60 @@
+📅 Day 4 — Delta Lake Introduction
+📌 Objective
+
+The goal of Day 4 was to understand Delta Lake fundamentals and apply them practically on an e-commerce dataset using Databricks.
+
+📚 Concepts Covered
+
+What is Delta Lake
+
+Difference between Delta vs Parquet
+
+ACID transactions in big data
+
+Schema enforcement and data reliability
+
+Databricks storage best practices (Volumes)
+
+🛠️ Hands-on Tasks Performed
+
+Loaded e-commerce CSV data (October & November 2019)
+
+Fixed schema issues (casting price column)
+
+Converted cleaned data into Delta format
+
+Stored Delta data using Databricks Volumes
+
+Read Delta data using PySpark
+
+Created temporary views for SQL analysis
+
+Understood Databricks Community Edition limitations
+
+💻 Key Code Snippets
+# Writing data in Delta format
+df_full.write \
+    .format("delta") \
+    .mode("overwrite") \
+    .save("/Volumes/workspace/ecommerce/ecommerce_data/delta_ecommerce_events")
+
+# Reading Delta data
+df_delta = spark.read.format("delta") \
+    .load("/Volumes/workspace/ecommerce/ecommerce_data/delta_ecommerce_events")
+
+# Creating temp view for SQL
+df_delta.createOrReplaceTempView("ecommerce_delta")
+
+🔍 Learnings & Observations
+
+Delta Lake ensures data consistency and reliability
+
+Not all storage paths support Delta transactions
+
+Spark DataFrames are session-based and must be recreated after restarts
+
+Temporary views are very useful for SQL analysis in Databricks CE
+
+🚀 Outcome
+
+By the end of Day 4, I gained clarity on how Delta Lake helps in building production-ready data pipelines and why it is preferred over raw file formats.
