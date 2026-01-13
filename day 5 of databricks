@@ -1,0 +1,52 @@
+📅 Day 5 – Delta Lake Advanced Concepts
+
+On Day 5, I explored advanced features of Delta Lake and how they are used in real-world data engineering workflows.
+
+🔹 Topics Covered
+1. Time Travel
+
+Learned how Delta Lake keeps track of table versions
+
+Understood how previous versions of data can be queried for auditing and debugging
+
+2. MERGE (Upserts)
+
+Studied how incremental data updates work using MERGE INTO
+
+Understood why MERGE is preferred over full overwrite in production pipelines
+
+3. OPTIMIZE & ZORDER
+
+Learned how OPTIMIZE helps with file compaction
+
+Understood ZORDER for improving query performance on frequently filtered columns
+
+Execution not supported in Databricks Community Edition, so concepts were studied theoretically
+
+4. VACUUM
+
+Learned how VACUUM removes old, unused files
+
+Understood its importance in storage management and performance
+
+🧠 Key Learnings
+
+Delta Lake adds reliability and performance on top of data lakes
+
+MERGE is critical for incremental data processing
+
+Performance tuning concepts are as important as writing correct code
+
+Platform limitations are normal, and understanding concepts matters more
+
+🛠️ Tools Used
+
+Databricks Community Edition
+
+PySpark
+
+Delta Lake
+
+📌 Note
+
+Some advanced operations like OPTIMIZE and ZORDER were studied conceptually due to limitations of Databricks Community Edition.
