@@ -1,0 +1,83 @@
+📅 Day 6 – Medallion Architecture Implementation
+
+On Day 6, I implemented a Medallion Architecture using PySpark and Delta Lake in Databricks Community Edition.
+
+The goal was to understand how data flows through different layers in a real-world data engineering pipeline.
+
+🏗️ Architecture Design
+Raw CSV Data
+     ↓
+Bronze Layer (Raw Delta)
+     ↓
+Silver Layer (Cleaned Delta)
+     ↓
+Gold Layer (Business Aggregates)
+
+🟤 Bronze Layer – Raw Ingestion
+
+Purpose:
+
+Store raw data exactly as received
+
+No transformations or cleaning
+
+Actions performed:
+
+Read raw CSV e-commerce data
+
+Stored it as a Delta table in the Bronze layer
+
+⚪ Silver Layer – Cleaning & Validation
+
+Purpose:
+
+Make data reliable and usable
+
+Actions performed:
+
+Converted price column to proper numeric type
+
+Removed records with missing user information
+
+Stored cleaned data in Silver layer
+
+🟡 Gold Layer – Business Aggregates
+
+Purpose:
+
+Create business-ready datasets for analytics
+
+Actions performed:
+
+Filtered purchase events
+
+Calculated total revenue by product category
+
+Stored aggregated results in Gold layer
+
+🧠 Key Learnings
+
+Medallion architecture helps organize data logically
+
+Each layer has a clear responsibility
+
+Delta Lake ensures reliability across all layers
+
+Gold layer is what BI tools directly consume
+
+🛠️ Tools Used
+
+Databricks Community Edition
+
+PySpark
+
+Delta Lake
+
+✅ Status
+
+✔ Bronze, Silver, and Gold layers implemented
+✔ Day 6 completed successfully
+
+📌 Note
+
+All implementations were done considering Databricks Community Edition limitations.
