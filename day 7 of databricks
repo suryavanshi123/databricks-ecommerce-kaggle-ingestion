@@ -1,0 +1,71 @@
+📅 Day 07 – Workflows & Job Orchestration (Databricks)
+📌 Objective
+
+The goal of Day 7 was to understand how data pipelines are orchestrated and automated in Databricks using workflows and job concepts.
+
+🧱 Architecture Used
+Bronze (Raw Ingestion)
+        ↓
+Silver (Cleaned & Validated Data)
+        ↓
+Gold (Business Aggregates)
+
+🛠️ What I Implemented
+1️⃣ Parameterized Notebooks
+
+Each notebook (Bronze, Silver, Gold) includes Databricks widgets to accept parameters like run_date.
+This makes notebooks reusable and production-ready.
+
+2️⃣ Separate Layered Notebooks
+
+Bronze Notebook: Loads raw CSV data and stores it as Delta
+
+Silver Notebook: Cleans data, removes duplicates, and validates fields
+
+Gold Notebook: Creates business-level aggregations
+
+3️⃣ Orchestration Using Master Notebook
+
+Since Databricks Community Edition does not support multi-task Jobs UI:
+
+I created a master notebook
+
+Used dbutils.notebook.run() to execute notebooks sequentially
+
+This simulates task dependencies and workflow execution
+
+dbutils.notebook.run("bronze_ingestion", 0)
+dbutils.notebook.run("silver_cleaning", 0)
+dbutils.notebook.run("gold_aggregation", 0)
+
+
+If any step fails, the pipeline stops — similar to real job workflows.
+
+⚠️ Note on Scheduling
+
+Job scheduling and multi-task workflows are paid features in Databricks.
+In production, this pipeline would be scheduled using Databricks Jobs.
+
+For learning purposes, orchestration is demonstrated using a master notebook.
+
+📸 Screenshots
+
+I have added screenshots of:
+
+Notebook execution
+
+Pipeline orchestration
+
+Query outputs
+
+These help explain the workflow visually along with the code.
+
+📘 Key Learnings
+
+Difference between notebooks and jobs
+
+Importance of task dependencies
+
+How orchestration works behind the scenes
+
+How to adapt solutions based on platform limitations
