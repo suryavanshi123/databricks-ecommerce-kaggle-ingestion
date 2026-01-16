@@ -1,0 +1,67 @@
+📅 Day 08 – Data Governance & Table Management (Databricks)
+
+🎯 Objective
+
+To understand how data is organized, managed, and governed in Databricks using table abstractions, views, and governance concepts inspired by Unity Catalog.
+
+🧱 Core Concepts Learned
+
+Catalog → Schema → Table hierarchy
+
+Difference between managed and external tables
+
+Importance of data access control
+
+Using views to limit data exposure
+
+Conceptual understanding of permissions (GRANT / REVOKE)
+
+🛠️ Implementation Details
+1️⃣ Managed Delta Table Creation
+
+Cleaned Silver-layer data was written as a managed Delta table using saveAsTable.
+This allows Databricks to manage both metadata and storage.
+
+silver_df.write.format("delta") \
+    .mode("overwrite") \
+    .saveAsTable("events_table")
+
+2️⃣ Querying the Managed Table
+SELECT * FROM events_table LIMIT 5;
+
+
+This confirms that the table is registered and accessible using SQL.
+
+3️⃣ Views for Controlled Access
+
+To simulate governance and restricted access, a view was created exposing only selected columns.
+
+CREATE OR REPLACE VIEW events_public AS
+SELECT
+    event_time,
+    event_type,
+    category_code,
+    price
+FROM events_table;
+
+
+Views help ensure that sensitive data remains hidden while still enabling analytics.
+
+4️⃣ Access Control (Conceptual)
+
+Although permissions were not executed directly, the correct syntax and purpose were studied:
+
+-- Example (Production Environment)
+GRANT SELECT
+ON TABLE ecommerce_catalog.sales.events
+TO analyst_role;
+
+📘 Key Takeaways
+
+Governance is a critical part of data engineering
+
+Managed tables simplify data management
+
+Views are powerful tools for controlled data access
+
+Understanding governance concepts is essential for production systems
