@@ -1,0 +1,62 @@
+📅 Day 9 – SQL Analytics & Dashboards (Databricks)
+🎯 Objective
+
+Use SQL to analyze curated data and generate business-ready insights such as revenue trends, funnels, and top-performing products.
+
+🧠 What I Learned
+
+How SQL analytics works in Databricks
+
+Understanding Unity Catalog and 3-level naming (catalog.schema.table)
+
+Writing analytical SQL queries on Silver and Gold tables
+
+Translating raw numbers into business insights
+
+Using notebook SQL cells for analytics and visualization
+
+🛠️ Tasks Performed
+1️⃣ Environment Setup
+
+Identified available catalogs using:
+
+SHOW CATALOGS;
+
+
+Set active catalog and schema before querying tables
+
+2️⃣ Analytical SQL Queries
+
+Revenue Trend Analysis
+
+Aggregated purchase data by date to track revenue growth
+
+Funnel Analysis
+
+Compared user views vs purchases to understand conversion
+
+Top Products
+
+Ranked products based on total revenue contribution
+
+3️⃣ Visualization
+
+Converted query outputs into charts directly in notebook
+
+Used charts to represent:
+
+Line trends
+
+Bar rankings
+
+Funnel comparisons
+
+4️⃣ Filters & Exploration
+
+Applied date and event-type filters in SQL queries
+
+Explored different views of the same data for deeper insights
+
+📌 Key Learning Outcome
+
+This day highlighted how SQL analytics transforms engineered data into decision-ready insights, making it a crucial skill for data engineers and analysts working with Databricks.
