@@ -1,0 +1,28 @@
+Day 11 – Statistical Analysis & Feature Engineering
+
+Objective:
+Prepare cleaned data for machine learning by applying basic statistical analysis and feature engineering.
+
+What I Learned
+
+Spark supports correlation only for numeric columns
+
+String columns must be encoded before analysis
+
+Log transformation helps handle skewed numerical data
+
+Feature engineering is a critical step before ML modeling
+
+Tasks Performed
+
+Generated descriptive statistics using summary()
+
+Created a binary feature (is_purchase) from event types
+
+Applied log transformation on price values
+
+Ran correlation analysis on engineered numerical features
+
+Key Takeaway
+
+This exercise helped me understand how data moves from raw events to meaningful numerical features, which is a core step in real-world ML pipelines.
