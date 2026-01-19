@@ -1,0 +1,53 @@
+Day 10 – Query Performance & Optimization (Databricks)
+
+This module focuses on understanding query behavior and fixing common Delta Lake issues before applying performance optimizations.
+
+🧠 Key Learnings
+
+How Spark SQL resolves tables and schemas
+
+Why Delta tables may exist without columns
+
+Importance of schema validation before querying
+
+How EXPLAIN helps analyze query execution plans
+
+Practical debugging of real Databricks errors
+
+🛠️ Tasks Completed
+1️⃣ Table Validation
+
+Listed available tables using SHOW TABLES
+
+Checked schema using DESCRIBE
+
+Identified a Delta table with missing schema
+
+2️⃣ Fixing Broken Delta Table
+
+Dropped the incorrect table
+
+Recreated it by writing data with schema
+
+Used mergeSchema = true to register columns properly
+
+3️⃣ Query Plan Analysis
+
+Executed EXPLAIN on filtered queries
+
+Observed how Spark plans scans and filters
+
+Understood why schema correctness impacts performance
+
+📂 Outcome
+
+Queries now execute successfully
+
+Execution plans are visible and understandable
+
+Table is ready for partitioning and optimization
+
+🔑 Key Takeaway
+
+Performance tuning is not about commands first —
+it starts with correct schema, clean tables, and understanding execution plans.
