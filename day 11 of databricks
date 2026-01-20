@@ -1,0 +1,24 @@
+📘 Day 11 – Statistical Analysis & ML Prep (Databricks + PySpark)
+
+Objective:
+Understand data behavior using statistics and prepare features for machine learning.
+
+✔ What I Did:
+
+Generated statistical summaries for key numerical columns
+
+Compared weekday vs weekend purchase behavior
+
+Identified correlations between numerical features
+
+Engineered ML-ready features:
+
+Binary target variable (is_purchase)
+
+Log-scaled price feature (log_price)
+
+Built a clean feature dataset for downstream ML tasks
+
+🧠 Key Takeaway:
+
+Statistical understanding and feature engineering are critical steps before applying any ML model. Clean, meaningful features matter more than complex algorithms.
